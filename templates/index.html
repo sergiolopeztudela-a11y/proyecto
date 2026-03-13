@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Privadas | SecureNotes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong>🔐 SecureNotes</strong></li>
+            </ul>
+            <ul id="nav-actions">
+                <!-- Se llenará dinámicamente -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Login Section -->
+        <section id="auth-section">
+            <div class="grid">
+                <article id="login-card">
+                    <header>Iniciar Sesión</header>
+                    <form id="login-form">
+                        <input type="text" id="login-username" placeholder="Usuario" required>
+                        <input type="password" id="login-password" placeholder="Contraseña" required>
+                        <button type="submit">Entrar</button>
+                    </form>
+                </article>
+                <article id="register-card">
+                    <header>Registrarse</header>
+                    <form id="register-form">
+                        <input type="text" id="reg-username" placeholder="Nuevo Usuario" required>
+                        <input type="password" id="reg-password" placeholder="Contraseña" required>
+                        <button type="submit" class="secondary">Crear Cuenta</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dashboard Section (Hidden initially) -->
+        <section id="dashboard-section" style="display: none;">
+            <article>
+                <header>Nueva Nota</header>
+                <form id="note-form">
+                    <input type="text" id="note-title" placeholder="Título" required>
+                    <textarea id="note-content" placeholder="Escribe algo..." required></textarea>
+                    <button type="submit">Guardar Nota</button>
+                </form>
+            </article>
+
+            <hr>
+
+            <div id="notes-list" class="grid">
+                <!-- Notas se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <small>Gestor de Notas Privadas &copy; 2026</small>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

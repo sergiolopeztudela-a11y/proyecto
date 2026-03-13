@@ -1,0 +1,61 @@
+:root {
+    --primary: #8e44ad;
+    --primary-hover: #9b59b6;
+    --card-sectionning-background-color: #1a1a1a;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100-vh;
+    color: #e0e0e0;
+}
+
+article {
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    background-color: rgba(25, 25, 25, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    background-color: var(--primary);
+    border: none;
+    transition: scale 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    scale: 1.02;
+}
+
+.note-card {
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.note-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.note-card small {
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    background-color: #c0392b;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+}

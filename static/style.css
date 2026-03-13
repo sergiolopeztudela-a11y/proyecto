@@ -1,7 +1,9 @@
 :root {
-    --primary: #f39c12; /* Signal Orange */
+    --primary: #f39c12;
+    /* Signal Orange */
     --primary-hover: #e67e22;
-    --success: #2ecc71; /* Acid Green */
+    --success: #2ecc71;
+    /* Acid Green */
     --error: #e74c3c;
     --card-background: rgba(25, 25, 25, 0.9);
 }
@@ -14,8 +16,9 @@ body {
 }
 
 article {
-    border-radius: 4px; /* Sharp geometry for premium feel */
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    /* Sharp geometry for premium feel */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     background-color: var(--card-background);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -84,7 +87,8 @@ button:hover {
 }
 
 .requirement {
-    color: #aaa; /* Brighter grey for visibility */
+    color: #aaa;
+    /* Brighter grey for visibility */
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
@@ -115,4 +119,67 @@ button:hover {
     color: white !important;
 }
 
-.hidden { display: none; }
+.hidden {
+    display: none;
+}
+
+/* Obfuscated Easter Egg / Audit Styles */
+.centered-audit-body {
+    background: #000 !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.centered-audit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+}
+
+.centered-audit-container p {
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+
+.audit-img {
+    max-width: 600px;
+    border: 1px solid #333;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 25px rgba(255, 128, 0, 0.4);
+}
+
+.audit-warn {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff8000;
+    animation: audit-blink 1s infinite;
+    text-shadow: 0 0 15px rgba(255, 128, 0, 0.4);
+}
+
+@keyframes audit-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.audit-link {
+    color: #ff8000 !important;
+    text-decoration: underline;
+}
+
+.audit-link:hover {
+    color: #fff !important;
+}

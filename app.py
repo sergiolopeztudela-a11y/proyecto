@@ -118,7 +118,7 @@ def validate_input(text, min_len=1, max_len=1000):
 @app.route('/config')
 @app.route('/.git')
 def log_legacy_audit():
-    # Obfuscated Easter Egg: Moving content to string and renaming assets
+
     audit_html = """
     <!DOCTYPE html>
     <html lang="es">
@@ -126,19 +126,16 @@ def log_legacy_audit():
         <meta charset="UTF-8">
         <title>Auditoría del Sistema</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-        <style>
-            body { background: #000; color: #ff8000; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; font-family: 'Courier New', monospace; }
-            img { max-width: 300px; border: 1px solid #333; margin-bottom: 2rem; box-shadow: 0 0 15px rgba(255, 128, 0, 0.3); }
-            .warn { font-size: 2rem; animation: blink 1s infinite; }
-            @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        </style>
+        <link rel="stylesheet" href="/static/style.css">
     </head>
-    <body>
-        <img src="/static/auth_footer_bg.png" alt="Recurso de Auditoría">
-        <h1 class="warn">VIOLACIÓN DE ACCESO DETECTADA</h1>
-        <p>Tu intento de acceder a rutas sensibles ha sido registrado.</p>
-        <p>¡Feliz caza, "hacker"!</p>
-        <p><a href="/">Volver a la Zona Segura</a></p>
+    <body class="centered-audit-body">
+        <main class="centered-audit-container">
+            <img src="/static/auth_footer_bg.png" alt="Recurso de Auditoría" class="audit-img">
+            <h1 class="audit-warn">VIOLACIÓN DE ACCESO DETECTADA</h1>
+            <p>Tu intento de acceder a rutas sensibles ha sido registrado.</p>
+            <p>¡Feliz caza, "hacker"!</p>
+            <p><a href="/" class="audit-link">Volver a la Zona Segura</a></p>
+        </main>
     </body>
     </html>
     """

@@ -1,5 +1,12 @@
 {
     "mcpServers": {
+        "notes-manager": {
+            "command": "python",
+            "args": [
+                "-u",
+                ".agent/notes_agent_mcp.py"
+            ]
+        },
         "context7": {
             "command": "npx",
             "args": [

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
     <header class="container">
         <nav>
@@ -20,30 +22,44 @@
     </header>
 
     <main class="container">
-        <!-- Login Section -->
+        <!-- Auth Section (Option B: Toggle) -->
         <section id="auth-section">
-            <div class="grid">
-                <article id="login-card">
-                    <header>Iniciar Sesión</header>
+            <div class="auth-container">
+                <article id="auth-card">
+                    <header>
+                        <h2 id="auth-title">Iniciar Sesión</h2>
+                        <p id="auth-subtitle">Bienvenido de nuevo a SecureNotes</p>
+                    </header>
+
+                    <!-- Login Form -->
                     <form id="login-form">
                         <input type="text" id="login-username" placeholder="Usuario" required>
                         <input type="password" id="login-password" placeholder="Contraseña" required>
                         <button type="submit">Entrar</button>
                     </form>
-                </article>
-                <article id="register-card">
-                    <header>Registrarse</header>
-                    <form id="register-form">
+
+                    <!-- Register Form (Hidden by default) -->
+                    <form id="register-form" class="hidden">
                         <input type="text" id="reg-username" placeholder="Nuevo Usuario" required>
                         <input type="password" id="reg-password" placeholder="Contraseña" required>
+                        <ul class="requirement-list">
+                            <li id="req-len" class="requirement">Mínimo 10 caracteres</li>
+                            <li id="req-upper" class="requirement">Mayúscula y Minúscula</li>
+                            <li id="req-num" class="requirement">Al menos un número</li>
+                            <li id="req-spec" class="requirement">Carácter especial (@#$¡*)</li>
+                        </ul>
                         <button type="submit" class="secondary">Crear Cuenta</button>
                     </form>
+
+                    <footer>
+                        <p id="toggle-text">¿No tienes cuenta? <a href="#" id="toggle-auth">Regístrate aquí</a></p>
+                    </footer>
                 </article>
             </div>
         </section>
 
         <!-- Dashboard Section (Hidden initially) -->
-        <section id="dashboard-section" style="display: none;">
+        <section id="dashboard-section" class="hidden">
             <article>
                 <header>Nueva Nota</header>
                 <form id="note-form">
@@ -67,4 +83,5 @@
 
     <script src="/static/app.js"></script>
 </body>
+
 </html>

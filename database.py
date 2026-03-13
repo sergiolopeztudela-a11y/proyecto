@@ -1,7 +1,7 @@
 import sqlite3
 import os
 
-DB_PATH = 'notes.db'
+DB_PATH = os.path.join('instance', 'notes.db')
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
